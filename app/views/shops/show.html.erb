@@ -1,0 +1,50 @@
+<p>
+  <strong>Chaine:</strong>
+  <%= @shop.chain %>
+</p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @shop.name %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @shop.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @shop.longitude %>
+</p>
+
+<p>
+  <strong>Addresse:</strong>
+  <%= @shop.address %>
+</p>
+
+<p>
+  <strong>Ville:</strong>
+  <%= @shop.city %>
+</p>
+
+<p>
+  <strong>Code postal:</strong>
+  <%= @shop.zip %>
+</p>
+
+<p>
+  <strong>Téléphone:</strong>
+  <%= @shop.phone %>
+</p>
+
+<p>
+  <strong>Code pays:</strong>
+  <%= @shop.country_code %>
+</p>
+
+<%= link_to 'Supprimer', shop_path(shop),
+              method: :delete,
+              data: { confirm: 'Confirmer la suppression?' } %>
+<%= link_to 'Editer', edit_shop_path(@shop) %>
+<%= link_to 'Retour', shops_path %>
