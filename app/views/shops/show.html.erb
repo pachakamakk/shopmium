@@ -43,7 +43,7 @@
   <%= @shop.country_code %>
 </p>
 
-<%= link_to 'Supprimer', shop_path(shop),
+<%= link_to 'Supprimer', shop_path(@shop),
               method: :delete,
               data: { confirm: 'Confirmer la suppression?' } %>
 <%= link_to 'Editer', edit_shop_path(@shop) %>
