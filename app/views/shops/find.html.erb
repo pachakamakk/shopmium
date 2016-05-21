@@ -1,4 +1,4 @@
-<h1>Les boutiques proches de vous</h1>
+<h1>Les boutiques proches de vous (Dans un rayon de <%= @distance %>km)</h1>
 
 <%= render 'showInTable' %>
 
@@ -11,4 +11,5 @@
   <br/>
   <%= submit_tag("Rechercher") %>
 <% end %>
+<br/>
 <%= link_to 'Retour', controller='/' %>

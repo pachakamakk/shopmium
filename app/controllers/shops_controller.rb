@@ -66,13 +66,10 @@ def find
       end
     end
   end
-  puts("Shops: ")
-  puts(@shops)
 end
 
 def index
   @shops = Shop.all
-  puts(@shops)
 end
 
 def show
