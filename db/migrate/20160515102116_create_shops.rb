@@ -12,6 +12,8 @@ class CreateShops < ActiveRecord::Migration
       t.string :country_code
 
       t.timestamps null: false
-    end
+      geocoded_by :full_street_address   # can also be an IP address
+      after_validation :geocode
+      end
   end
 end

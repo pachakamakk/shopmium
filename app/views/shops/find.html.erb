@@ -1,0 +1,14 @@
+<h1>Les boutiques proches de vous</h1>
+
+<%= render 'showInTable' %>
+
+<%= form_tag("/shop/find", method: "get") do %>
+  <br/><br/>
+  <%= label_tag(:dist, "Distance maximum:") %>
+  <%= text_field_tag(:dist) %><br/>
+  <%= label_tag(:limit, "Nombre maximum d'éléments:") %>
+  <%= text_field_tag(:limit) %>
+  <br/>
+  <%= submit_tag("Rechercher") %>
+<% end %>
+<%= link_to 'Retour', controller='/' %>

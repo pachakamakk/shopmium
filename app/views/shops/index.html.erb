@@ -1,28 +1,5 @@
 <h1>Les boutiques</h1>
 
-<table>
-  <tr>
-    <th>Chaine</th>
-    <th>Nom</th>
-    <th>Addresse</th>
-    <th>Ville</th>
-    <th>Téléphone</th>
-  </tr>
-
-  <% @shops.each do |shop| %>
-    <tr>
-      <td><%= shop.chain %></td>
-      <td><%= shop.name %></td>
-      <td><%= shop.address %></td>
-      <td><%= shop.city %></td>
-      <td><%= shop.phone %></td>
-      <td><%= link_to 'Voir', shop_path(shop) %></td>
-      <td><%= link_to 'Edit', edit_shop_path(shop) %></td>
-      <td><%= link_to 'Supprimer', shop_path(shop),
-                    method: :delete,
-                    data: { confirm: 'Confirmer la suppression?' } %></td>
-    </tr>
-  <% end %>
-</table>
+<%= render 'showInTable' %>
 
 <%= link_to 'Retour', controller='/' %>
